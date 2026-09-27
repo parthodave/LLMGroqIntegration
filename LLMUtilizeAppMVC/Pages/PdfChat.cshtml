@@ -1,0 +1,171 @@
+@page
+@model PdfChatModel
+@{
+    ViewData["Title"] = "Ask Questions About a PDF";
+}
+
+<style>
+    .pdf-chat {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .pdf-chat h1 {
+        margin-bottom: .5rem;
+    }
+
+    .pdf-chat .intro {
+        color: #667085;
+        margin-bottom: 1.5rem;
+    }
+
+    .pdf-form,
+    .answer-card {
+        border-radius: 14px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 18px rgba(16, 24, 40, .08);
+        background: #fff;
+    }
+
+    .pdf-form {
+        border: 1px solid #d0d5dd;
+    }
+
+    .field {
+        margin-bottom: 1rem;
+    }
+
+    .field label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: .4rem;
+    }
+
+    .field input[type=file],
+    .field textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: .75rem;
+        border: 1px solid #98a2b3;
+        border-radius: 8px;
+        font: inherit;
+    }
+
+    .field textarea {
+        min-height: 110px;
+        resize: vertical;
+    }
+
+    .hint {
+        color: #667085;
+        font-size: .9rem;
+        margin-top: .35rem;
+    }
+
+    .submit-button {
+        border: 0;
+        border-radius: 8px;
+        padding: .75rem 1.25rem;
+        background: #4f46e5;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .submit-button:disabled {
+        opacity: .65;
+        cursor: wait;
+    }
+
+    .answer-card {
+        margin-top: 1.5rem;
+        border-left: 5px solid #4f46e5;
+    }
+
+    .answer {
+        white-space: pre-wrap;
+        line-height: 1.65;
+    }
+
+    .error {
+        margin-top: 1rem;
+        padding: .85rem 1rem;
+        border-radius: 8px;
+        background: #fef3f2;
+        color: #b42318;
+    }
+
+    .metadata {
+        margin-top: 1rem;
+        color: #667085;
+        font-size: .85rem;
+    }
+
+    .loading {
+        display: none;
+        margin-top: 1rem;
+        color: #4f46e5;
+    }
+
+    .loading.visible {
+        display: block;
+    }
+</style>
+
+<main class="pdf-chat">
+    <h1>Ask Questions About a PDF</h1>
+    <p class="intro">
+        Upload a text-based PDF and ask the Groq Llama model a question about its contents.
+        The document text is sent to the configured LLM provider for processing.
+    </p>
+
+    <form method="post" enctype="multipart/form-data" id="pdfChatForm" class="pdf-form">
+        <div class="field">
+            <label asp-for="PdfFile">PDF file</label>
+            <input asp-for="PdfFile" type="file" accept="application/pdf,.pdf" />
+            <div class="hint">Maximum size: 10 MB. Scanned image-only PDFs require OCR.</div>
+            <span asp-validation-for="PdfFile" class="error"></span>
+        </div>
+
+        <div class="field">
+            <label asp-for="Question">Your question</label>
+            <textarea asp-for="Question" placeholder="For example: What are the main conclusions of this document?"></textarea>
+            <span asp-validation-for="Question" class="error"></span>
+        </div>
+
+        <button type="submit" class="submit-button" id="submitButton">Ask about this PDF</button>
+        <div class="loading" id="loadingMessage">Reading the PDF and asking the model...</div>
+    </form>
+
+    @if (Model.Response is not null)
+    {
+        <section class="answer-card" aria-live="polite">
+            <h2>Answer</h2>
+
+            @if (Model.Response.Success)
+            {
+                <div class="answer">@Model.Response.Answer</div>
+                <div class="metadata">
+                    File: @Model.UploadedFileName ·
+                    Model: @Model.Response.Model ·
+                    Tokens: @Model.Response.TokensUsed
+                </div>
+            }
+            else
+            {
+                <div class="error">@Model.Response.ErrorMessage</div>
+            }
+        </section>
+    }
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById('pdfChatForm').addEventListener('submit', function () {
+            document.getElementById('submitButton').disabled = true;
+            document.getElementById('loadingMessage').classList.add('visible');
+        });
+    </script>
+}

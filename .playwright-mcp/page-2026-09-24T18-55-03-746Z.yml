@@ -1,0 +1,648 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Groq" [ref=e5] [cursor=pointer]:
+        - /url: /home
+        - img "Groq" [ref=e6]
+      - generic [ref=e7]:
+        - navigation [ref=e8]:
+          - link "Playground" [ref=e10] [cursor=pointer]:
+            - /url: /playground
+            - generic [ref=e11]: Playground
+          - link "API Keys" [ref=e13] [cursor=pointer]:
+            - /url: /keys
+            - generic [ref=e14]: API Keys
+          - link "Dashboard" [ref=e16] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e17]: Dashboard
+          - link "Docs" [ref=e19] [cursor=pointer]:
+            - /url: /docs
+            - generic [ref=e20]: Docs
+          - link [ref=e22] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e24]
+        - link "Log In" [ref=e28] [cursor=pointer]:
+          - /url: /login
+    - generic [ref=e29]:
+      - complementary [ref=e30]:
+        - button "Search (Ctrl+K)" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]:
+            - img [ref=e34]
+            - generic [ref=e36]: Search
+          - generic [ref=e37]:
+            - img [ref=e39]
+            - generic [ref=e41]: K
+        - generic [ref=e42]:
+          - link "Docs" [ref=e43] [cursor=pointer]:
+            - /url: /docs/overview
+          - link "API Reference" [ref=e44] [cursor=pointer]:
+            - /url: /docs/api-reference
+        - navigation [ref=e47]:
+          - heading "Getting Started" [level=3] [ref=e49]
+          - link "Overview" [ref=e51] [cursor=pointer]:
+            - /url: /docs/overview
+            - generic [ref=e52]: Overview
+          - link "Quickstart" [ref=e54] [cursor=pointer]:
+            - /url: /docs/quickstart
+            - generic [ref=e55]: Quickstart
+          - link "Models" [ref=e57] [cursor=pointer]:
+            - /url: /docs/models
+            - generic [ref=e58]: Models
+          - link "OpenAI Compatibility" [ref=e60] [cursor=pointer]:
+            - /url: /docs/openai
+            - generic [ref=e61]: OpenAI Compatibility
+          - link "Rate Limits" [ref=e63] [cursor=pointer]:
+            - /url: /docs/rate-limits
+            - generic [ref=e64]: Rate Limits
+          - link "Templates" [ref=e66] [cursor=pointer]:
+            - /url: /docs/examples
+            - generic [ref=e67]: Templates
+          - link "API Reference" [ref=e69] [cursor=pointer]:
+            - /url: /docs/api-reference
+            - generic [ref=e70]: API Reference
+          - heading "Core Features" [level=3] [ref=e72]
+          - link "Text Generation" [ref=e74] [cursor=pointer]:
+            - /url: /docs/text-chat
+            - generic [ref=e75]: Text Generation
+          - link "Speech to Text" [ref=e77] [cursor=pointer]:
+            - /url: /docs/speech-to-text
+            - generic [ref=e78]: Speech to Text
+          - link "Text to Speech" [ref=e80] [cursor=pointer]:
+            - /url: /docs/text-to-speech
+            - generic [ref=e81]: Text to Speech
+          - link "OCR and Image Recognition" [ref=e83] [cursor=pointer]:
+            - /url: /docs/vision
+            - generic [ref=e84]: OCR and Image Recognition
+          - link "Reasoning" [ref=e86] [cursor=pointer]:
+            - /url: /docs/reasoning
+            - generic [ref=e87]: Reasoning
+          - link "Content Moderation" [ref=e89] [cursor=pointer]:
+            - /url: /docs/content-moderation
+            - generic [ref=e90]: Content Moderation
+          - link "Structured Outputs" [ref=e92] [cursor=pointer]:
+            - /url: /docs/structured-outputs
+            - generic [ref=e93]: Structured Outputs
+          - link "Prompt Caching" [ref=e95] [cursor=pointer]:
+            - /url: /docs/prompt-caching
+            - generic [ref=e96]: Prompt Caching
+          - heading "Tools & Integrations" [level=3] [ref=e98]
+          - link "Tool Use" [ref=e100] [cursor=pointer]:
+            - /url: /docs/tool-use/overview
+            - generic [ref=e101]: Tool Use
+          - link "Integrations Catalog" [ref=e103] [cursor=pointer]:
+            - /url: /docs/integrations
+            - generic [ref=e104]: Integrations Catalog
+          - link "Coding with Groq" [ref=e106] [cursor=pointer]:
+            - /url: /docs/coding-with-groq
+            - generic [ref=e107]: Coding with Groq
+          - heading "Guides" [level=3] [ref=e109]
+          - link "Prompting Guide" [ref=e111] [cursor=pointer]:
+            - /url: /docs/prompting
+            - generic [ref=e112]: Prompting Guide
+          - link "Assistant Message Prefilling" [ref=e114] [cursor=pointer]:
+            - /url: /docs/prefilling
+            - generic [ref=e115]: Assistant Message Prefilling
+          - heading "Service Tiers" [level=3] [ref=e117]
+          - link "Service Tiers" [ref=e119] [cursor=pointer]:
+            - /url: /docs/service-tiers
+            - generic [ref=e120]: Service Tiers
+          - link "Performance Tier" [ref=e122] [cursor=pointer]:
+            - /url: /docs/performance-tier
+            - generic [ref=e123]: Performance Tier
+          - link "Flex Processing" [ref=e125] [cursor=pointer]:
+            - /url: /docs/flex-processing
+            - generic [ref=e126]: Flex Processing
+          - link "Batch Processing" [ref=e128] [cursor=pointer]:
+            - /url: /docs/batch
+            - generic [ref=e129]: Batch Processing
+          - heading "Advanced" [level=3] [ref=e131]
+          - link "LoRA Inference" [ref=e133] [cursor=pointer]:
+            - /url: /docs/lora
+            - generic [ref=e134]: LoRA Inference
+          - heading "Production Readiness" [level=3] [ref=e136]
+          - link "Production Checklist" [ref=e138] [cursor=pointer]:
+            - /url: /docs/production-readiness/production-ready-checklist
+            - generic [ref=e139]: Production Checklist
+          - link "Optimizing Latency" [ref=e141] [cursor=pointer]:
+            - /url: /docs/production-readiness/optimizing-latency
+            - generic [ref=e142]: Optimizing Latency
+          - link "Security Onboarding" [ref=e144] [cursor=pointer]:
+            - /url: /docs/production-readiness/security-onboarding
+            - generic [ref=e145]: Security Onboarding
+          - link "Prometheus Metrics" [ref=e147] [cursor=pointer]:
+            - /url: /docs/prometheus-metrics
+            - generic [ref=e148]: Prometheus Metrics
+          - heading "Account and Console" [level=3] [ref=e150]
+          - link "Spend Limits" [ref=e152] [cursor=pointer]:
+            - /url: /docs/spend-limits
+            - generic [ref=e153]: Spend Limits
+          - link "Projects" [ref=e155] [cursor=pointer]:
+            - /url: /docs/projects
+            - generic [ref=e156]: Projects
+          - link "Model Permissions" [ref=e158] [cursor=pointer]:
+            - /url: /docs/model-permissions
+            - generic [ref=e159]: Model Permissions
+          - link "Billing FAQs" [ref=e161] [cursor=pointer]:
+            - /url: /docs/billing-faqs
+            - generic [ref=e162]: Billing FAQs
+          - link "Your Data" [ref=e164] [cursor=pointer]:
+            - /url: /docs/your-data
+            - generic [ref=e165]: Your Data
+          - heading "Developer Resources" [level=3] [ref=e167]
+          - link "SDK Libraries" [ref=e169] [cursor=pointer]:
+            - /url: /docs/libraries
+            - generic [ref=e170]: SDK Libraries
+          - link "Groq Badge" [ref=e172] [cursor=pointer]:
+            - /url: /docs/badge
+            - generic [ref=e173]: Groq Badge
+          - link "Developer Community arrow external" [ref=e175] [cursor=pointer]:
+            - /url: https://community.groq.com
+            - generic [ref=e176]:
+              - text: Developer Community
+              - img "arrow external" [ref=e177]
+          - link "OpenBench arrow external" [ref=e183] [cursor=pointer]:
+            - /url: https://openbench.dev
+            - generic [ref=e184]:
+              - text: OpenBench
+              - img "arrow external" [ref=e185]
+          - link "Error Codes" [ref=e191] [cursor=pointer]:
+            - /url: /docs/errors
+            - generic [ref=e192]: Error Codes
+          - link "Changelog" [ref=e194] [cursor=pointer]:
+            - /url: /docs/changelog
+            - generic [ref=e195]: Changelog
+          - heading "Legal" [level=3] [ref=e197]
+          - link "Policies & Notices" [ref=e199] [cursor=pointer]:
+            - /url: /docs/legal
+            - generic [ref=e200]: Policies & Notices
+      - generic [ref=e205]:
+        - generic [ref=e207]:
+          - generic [ref=e208]:
+            - heading "Supported Models" [level=1] [ref=e209]
+            - generic [ref=e210]:
+              - button "Copy page" [ref=e211] [cursor=pointer]
+              - button [ref=e213] [cursor=pointer]:
+                - img [ref=e214]
+          - paragraph [ref=e216]: Explore all available models on GroqCloud.
+          - heading "Featured Models" [level=2] [ref=e217]:
+            - link "Featured Models" [ref=e218] [cursor=pointer]:
+              - /url: "#featured-models"
+          - link "OpenAI GPT-OSS 120B icon OpenAI GPT-OSS 120B GPT-OSS 120B is OpenAI's flagship open-weight language model with 120 billion parameters, built in browser search and code execution, and reasoning capabilities. Token Speed ~500 tps Modalities Capabilities" [ref=e220] [cursor=pointer]:
+            - /url: /docs/model/openai/gpt-oss-120b
+            - generic [ref=e221]:
+              - generic [ref=e222]:
+                - generic [ref=e223]:
+                  - img "OpenAI GPT-OSS 120B icon" [ref=e224]
+                  - generic [ref=e225]:
+                    - heading "OpenAI GPT-OSS 120B" [level=3] [ref=e226]
+                    - paragraph [ref=e227]: GPT-OSS 120B is OpenAI's flagship open-weight language model with 120 billion parameters, built in browser search and code execution, and reasoning capabilities.
+                - img [ref=e228]
+              - generic [ref=e231]:
+                - generic [ref=e232]:
+                  - generic [ref=e233]: Token Speed
+                  - generic [ref=e234]:
+                    - img [ref=e235]
+                    - generic [ref=e239]: ~500 tps
+                - generic [ref=e240]:
+                  - generic [ref=e241]: Modalities
+                  - generic [ref=e242]:
+                    - img [ref=e245]
+                    - img [ref=e248]
+                    - img [ref=e252]
+                - generic [ref=e254]:
+                  - generic [ref=e255]: Capabilities
+                  - generic [ref=e256]:
+                    - img [ref=e259]
+                    - img [ref=e271]
+                    - img [ref=e276]
+          - heading "Production Models" [level=2] [ref=e279]:
+            - link "Production Models" [ref=e280] [cursor=pointer]:
+              - /url: "#production-models"
+          - paragraph [ref=e281]:
+            - strong [ref=e282]: "Note:"
+            - text: Production models are intended for use in your production environments. They meet or exceed our high standards for speed, quality, and reliability. Read more
+            - link "here" [ref=e283] [cursor=pointer]:
+              - /url: /docs/deprecations
+            - text: .
+          - table [ref=e287]:
+            - rowgroup [ref=e288]:
+              - row "MODEL ID SPEED (T/SEC) PRICE PER 1M TOKENS RATE LIMITS (DEVELOPER PLAN) CONTEXT WINDOW (TOKENS) MAX COMPLETION TOKENS MAX FILE SIZE" [ref=e289]:
+                - columnheader "MODEL ID" [ref=e290]
+                - columnheader "SPEED (T/SEC)" [ref=e291]
+                - columnheader "PRICE PER 1M TOKENS" [ref=e292]
+                - columnheader "RATE LIMITS (DEVELOPER PLAN)" [ref=e293]
+                - columnheader "CONTEXT WINDOW (TOKENS)" [ref=e294]
+                - columnheader "MAX COMPLETION TOKENS" [ref=e295]
+                - columnheader "MAX FILE SIZE" [ref=e296]
+            - rowgroup [ref=e297]:
+              - row "Meta Llama 3.1 8B Enterprise llama-3.1-8b-instant 560 Contact Sales Contact Sales 131,072 131,072 -" [ref=e298]:
+                - cell "Meta Llama 3.1 8B Enterprise llama-3.1-8b-instant" [ref=e299]:
+                  - generic [ref=e302]:
+                    - generic [ref=e303]:
+                      - link "Meta Llama 3.1 8B" [ref=e304] [cursor=pointer]:
+                        - /url: /docs/model/llama-3.1-8b-instant
+                        - img "Meta" [ref=e305]
+                        - text: Llama 3.1 8B
+                      - generic [ref=e306]: Enterprise
+                    - generic [ref=e307]: llama-3.1-8b-instant
+                - cell "560" [ref=e308]:
+                  - generic [ref=e310]: "560"
+                - cell "Contact Sales" [ref=e311]:
+                  - generic [ref=e314]:
+                    - generic [ref=e315]: Contact
+                    - generic [ref=e316]: Sales
+                - cell "Contact Sales" [ref=e317]:
+                  - generic [ref=e320]:
+                    - generic [ref=e321]: Contact
+                    - generic [ref=e322]: Sales
+                - cell "131,072" [ref=e323]:
+                  - generic [ref=e325]: 131,072
+                - cell "131,072" [ref=e326]:
+                  - generic [ref=e328]: 131,072
+                - cell "-" [ref=e329]:
+                  - generic [ref=e331]: "-"
+              - row "Meta Llama 3.3 70B Enterprise llama-3.3-70b-versatile 280 Contact Sales Contact Sales 131,072 32,768 -" [ref=e332]:
+                - cell "Meta Llama 3.3 70B Enterprise llama-3.3-70b-versatile" [ref=e333]:
+                  - generic [ref=e336]:
+                    - generic [ref=e337]:
+                      - link "Meta Llama 3.3 70B" [ref=e338] [cursor=pointer]:
+                        - /url: /docs/model/llama-3.3-70b-versatile
+                        - img "Meta" [ref=e339]
+                        - text: Llama 3.3 70B
+                      - generic [ref=e340]: Enterprise
+                    - generic [ref=e341]: llama-3.3-70b-versatile
+                - cell "280" [ref=e342]:
+                  - generic [ref=e344]: "280"
+                - cell "Contact Sales" [ref=e345]:
+                  - generic [ref=e348]:
+                    - generic [ref=e349]: Contact
+                    - generic [ref=e350]: Sales
+                - cell "Contact Sales" [ref=e351]:
+                  - generic [ref=e354]:
+                    - generic [ref=e355]: Contact
+                    - generic [ref=e356]: Sales
+                - cell "131,072" [ref=e357]:
+                  - generic [ref=e359]: 131,072
+                - cell "32,768" [ref=e360]:
+                  - generic [ref=e362]: 32,768
+                - cell "-" [ref=e363]:
+                  - generic [ref=e365]: "-"
+              - row "OpenAI GPT OSS 120B openai/gpt-oss-120b 500 $0.15 input $0.60 output 250K TPM 1K RPM 131,072 65,536 -" [ref=e366]:
+                - cell "OpenAI GPT OSS 120B openai/gpt-oss-120b" [ref=e367]:
+                  - generic [ref=e370]:
+                    - link "OpenAI GPT OSS 120B" [ref=e372] [cursor=pointer]:
+                      - /url: /docs/model/openai/gpt-oss-120b
+                      - img "OpenAI" [ref=e373]
+                      - text: GPT OSS 120B
+                    - generic [ref=e374]: openai/gpt-oss-120b
+                - cell "500" [ref=e375]:
+                  - generic [ref=e377]: "500"
+                - cell "$0.15 input $0.60 output" [ref=e378]:
+                  - generic [ref=e381]:
+                    - generic [ref=e382]: $0.15 input
+                    - generic [ref=e383]: $0.60 output
+                - cell "250K TPM 1K RPM" [ref=e384]:
+                  - generic [ref=e387]:
+                    - generic [ref=e388]: 250K TPM
+                    - generic [ref=e389]: 1K RPM
+                - cell "131,072" [ref=e390]:
+                  - generic [ref=e392]: 131,072
+                - cell "65,536" [ref=e393]:
+                  - generic [ref=e395]: 65,536
+                - cell "-" [ref=e396]:
+                  - generic [ref=e398]: "-"
+              - row "OpenAI GPT OSS 20B openai/gpt-oss-20b 1000 $0.075 input $0.30 output 250K TPM 1K RPM 131,072 65,536 -" [ref=e399]:
+                - cell "OpenAI GPT OSS 20B openai/gpt-oss-20b" [ref=e400]:
+                  - generic [ref=e403]:
+                    - link "OpenAI GPT OSS 20B" [ref=e405] [cursor=pointer]:
+                      - /url: /docs/model/openai/gpt-oss-20b
+                      - img "OpenAI" [ref=e406]
+                      - text: GPT OSS 20B
+                    - generic [ref=e407]: openai/gpt-oss-20b
+                - cell "1000" [ref=e408]:
+                  - generic [ref=e410]: "1000"
+                - cell "$0.075 input $0.30 output" [ref=e411]:
+                  - generic [ref=e414]:
+                    - generic [ref=e415]: $0.075 input
+                    - generic [ref=e416]: $0.30 output
+                - cell "250K TPM 1K RPM" [ref=e417]:
+                  - generic [ref=e420]:
+                    - generic [ref=e421]: 250K TPM
+                    - generic [ref=e422]: 1K RPM
+                - cell "131,072" [ref=e423]:
+                  - generic [ref=e425]: 131,072
+                - cell "65,536" [ref=e426]:
+                  - generic [ref=e428]: 65,536
+                - cell "-" [ref=e429]:
+                  - generic [ref=e431]: "-"
+              - row "OpenAI Whisper whisper-large-v3 - $0.111 per hour 200K ASH 300 RPM - - 100 MB" [ref=e432]:
+                - cell "OpenAI Whisper whisper-large-v3" [ref=e433]:
+                  - generic [ref=e436]:
+                    - link "OpenAI Whisper" [ref=e438] [cursor=pointer]:
+                      - /url: /docs/model/whisper-large-v3
+                      - img "OpenAI" [ref=e439]
+                      - text: Whisper
+                    - generic [ref=e440]: whisper-large-v3
+                - cell "-" [ref=e441]:
+                  - generic [ref=e443]: "-"
+                - cell "$0.111 per hour" [ref=e444]:
+                  - generic [ref=e448]: $0.111 per hour
+                - cell "200K ASH 300 RPM" [ref=e449]:
+                  - generic [ref=e452]:
+                    - generic [ref=e453]: 200K ASH
+                    - generic [ref=e454]: 300 RPM
+                - cell "-" [ref=e455]:
+                  - generic [ref=e457]: "-"
+                - cell "-" [ref=e458]:
+                  - generic [ref=e460]: "-"
+                - cell "100 MB" [ref=e461]:
+                  - generic [ref=e463]: 100 MB
+              - row "OpenAI Whisper Large V3 Turbo whisper-large-v3-turbo - $0.04 per hour 400K ASH 400 RPM - - 100 MB" [ref=e464]:
+                - cell "OpenAI Whisper Large V3 Turbo whisper-large-v3-turbo" [ref=e465]:
+                  - generic [ref=e468]:
+                    - link "OpenAI Whisper Large V3 Turbo" [ref=e470] [cursor=pointer]:
+                      - /url: /docs/model/whisper-large-v3-turbo
+                      - img "OpenAI" [ref=e471]
+                      - text: Whisper Large V3 Turbo
+                    - generic [ref=e472]: whisper-large-v3-turbo
+                - cell "-" [ref=e473]:
+                  - generic [ref=e475]: "-"
+                - cell "$0.04 per hour" [ref=e476]:
+                  - generic [ref=e480]: $0.04 per hour
+                - cell "400K ASH 400 RPM" [ref=e481]:
+                  - generic [ref=e484]:
+                    - generic [ref=e485]: 400K ASH
+                    - generic [ref=e486]: 400 RPM
+                - cell "-" [ref=e487]:
+                  - generic [ref=e489]: "-"
+                - cell "-" [ref=e490]:
+                  - generic [ref=e492]: "-"
+                - cell "100 MB" [ref=e493]:
+                  - generic [ref=e495]: 100 MB
+          - heading "Preview Models" [level=2] [ref=e496]:
+            - link "Preview Models" [ref=e497] [cursor=pointer]:
+              - /url: "#preview-models"
+          - paragraph [ref=e498]:
+            - strong [ref=e499]: "Note:"
+            - text: Preview models are intended for evaluation purposes only and should not be used in production environments as they may be discontinued at short notice. Read more about deprecations
+            - link "here" [ref=e500] [cursor=pointer]:
+              - /url: /docs/deprecations
+            - text: .
+          - table [ref=e504]:
+            - rowgroup [ref=e505]:
+              - row "MODEL ID SPEED (T/SEC) PRICE PER 1M TOKENS RATE LIMITS (DEVELOPER PLAN) CONTEXT WINDOW (TOKENS) MAX COMPLETION TOKENS MAX FILE SIZE" [ref=e506]:
+                - columnheader "MODEL ID" [ref=e507]
+                - columnheader "SPEED (T/SEC)" [ref=e508]
+                - columnheader "PRICE PER 1M TOKENS" [ref=e509]
+                - columnheader "RATE LIMITS (DEVELOPER PLAN)" [ref=e510]
+                - columnheader "CONTEXT WINDOW (TOKENS)" [ref=e511]
+                - columnheader "MAX COMPLETION TOKENS" [ref=e512]
+                - columnheader "MAX FILE SIZE" [ref=e513]
+            - rowgroup [ref=e514]:
+              - row "Canopy Labs Canopy Labs Orpheus Arabic Saudi canopylabs/orpheus-arabic-saudi - $40.00 per 1M characters 50K TPM 250 RPM 4,000 50,000 -" [ref=e515]:
+                - cell "Canopy Labs Canopy Labs Orpheus Arabic Saudi canopylabs/orpheus-arabic-saudi" [ref=e516]:
+                  - generic [ref=e519]:
+                    - link "Canopy Labs Canopy Labs Orpheus Arabic Saudi" [ref=e521] [cursor=pointer]:
+                      - /url: /docs/model/canopylabs/orpheus-arabic-saudi
+                      - img "Canopy Labs" [ref=e522]
+                      - text: Canopy Labs Orpheus Arabic Saudi
+                    - generic [ref=e523]: canopylabs/orpheus-arabic-saudi
+                - cell "-" [ref=e524]:
+                  - generic [ref=e526]: "-"
+                - cell "$40.00 per 1M characters" [ref=e527]:
+                  - generic [ref=e531]: $40.00 per 1M characters
+                - cell "50K TPM 250 RPM" [ref=e532]:
+                  - generic [ref=e535]:
+                    - generic [ref=e536]: 50K TPM
+                    - generic [ref=e537]: 250 RPM
+                - cell "4,000" [ref=e538]:
+                  - generic [ref=e540]: 4,000
+                - cell "50,000" [ref=e541]:
+                  - generic [ref=e543]: 50,000
+                - cell "-" [ref=e544]:
+                  - generic [ref=e546]: "-"
+              - row "Canopy Labs Canopy Labs Orpheus V1 English canopylabs/orpheus-v1-english - $22.00 per 1M characters 50K TPM 250 RPM 4,000 50,000 -" [ref=e547]:
+                - cell "Canopy Labs Canopy Labs Orpheus V1 English canopylabs/orpheus-v1-english" [ref=e548]:
+                  - generic [ref=e551]:
+                    - link "Canopy Labs Canopy Labs Orpheus V1 English" [ref=e553] [cursor=pointer]:
+                      - /url: /docs/model/canopylabs/orpheus-v1-english
+                      - img "Canopy Labs" [ref=e554]
+                      - text: Canopy Labs Orpheus V1 English
+                    - generic [ref=e555]: canopylabs/orpheus-v1-english
+                - cell "-" [ref=e556]:
+                  - generic [ref=e558]: "-"
+                - cell "$22.00 per 1M characters" [ref=e559]:
+                  - generic [ref=e563]: $22.00 per 1M characters
+                - cell "50K TPM 250 RPM" [ref=e564]:
+                  - generic [ref=e567]:
+                    - generic [ref=e568]: 50K TPM
+                    - generic [ref=e569]: 250 RPM
+                - cell "4,000" [ref=e570]:
+                  - generic [ref=e572]: 4,000
+                - cell "50,000" [ref=e573]:
+                  - generic [ref=e575]: 50,000
+                - cell "-" [ref=e576]:
+                  - generic [ref=e578]: "-"
+              - row "Meta Llama Prompt Guard 2 22M meta-llama/llama-prompt-guard-2-22m - $0.03 input $0.03 output 30K TPM 100 RPM 512 512 -" [ref=e579]:
+                - cell "Meta Llama Prompt Guard 2 22M meta-llama/llama-prompt-guard-2-22m" [ref=e580]:
+                  - generic [ref=e583]:
+                    - link "Meta Llama Prompt Guard 2 22M" [ref=e585] [cursor=pointer]:
+                      - /url: /docs/model/meta-llama/llama-prompt-guard-2-22m
+                      - img "Meta" [ref=e586]
+                      - text: Llama Prompt Guard 2 22M
+                    - generic [ref=e587]: meta-llama/llama-prompt-guard-2-22m
+                - cell "-" [ref=e588]:
+                  - generic [ref=e590]: "-"
+                - cell "$0.03 input $0.03 output" [ref=e591]:
+                  - generic [ref=e594]:
+                    - generic [ref=e595]: $0.03 input
+                    - generic [ref=e596]: $0.03 output
+                - cell "30K TPM 100 RPM" [ref=e597]:
+                  - generic [ref=e600]:
+                    - generic [ref=e601]: 30K TPM
+                    - generic [ref=e602]: 100 RPM
+                - cell "512" [ref=e603]:
+                  - generic [ref=e605]: "512"
+                - cell "512" [ref=e606]:
+                  - generic [ref=e608]: "512"
+                - cell "-" [ref=e609]:
+                  - generic [ref=e611]: "-"
+              - row "Meta Prompt Guard 2 86M meta-llama/llama-prompt-guard-2-86m - $0.04 input $0.04 output 30K TPM 100 RPM 512 512 -" [ref=e612]:
+                - cell "Meta Prompt Guard 2 86M meta-llama/llama-prompt-guard-2-86m" [ref=e613]:
+                  - generic [ref=e616]:
+                    - link "Meta Prompt Guard 2 86M" [ref=e618] [cursor=pointer]:
+                      - /url: /docs/model/meta-llama/llama-prompt-guard-2-86m
+                      - img "Meta" [ref=e619]
+                      - text: Prompt Guard 2 86M
+                    - generic [ref=e620]: meta-llama/llama-prompt-guard-2-86m
+                - cell "-" [ref=e621]:
+                  - generic [ref=e623]: "-"
+                - cell "$0.04 input $0.04 output" [ref=e624]:
+                  - generic [ref=e627]:
+                    - generic [ref=e628]: $0.04 input
+                    - generic [ref=e629]: $0.04 output
+                - cell "30K TPM 100 RPM" [ref=e630]:
+                  - generic [ref=e633]:
+                    - generic [ref=e634]: 30K TPM
+                    - generic [ref=e635]: 100 RPM
+                - cell "512" [ref=e636]:
+                  - generic [ref=e638]: "512"
+                - cell "512" [ref=e639]:
+                  - generic [ref=e641]: "512"
+                - cell "-" [ref=e642]:
+                  - generic [ref=e644]: "-"
+              - row "MiniMaxAI MiniMax M2.7 Enterprise minimaxai/minimax-m2.7 260 Contact Sales Contact Sales 196,608 131,072 -" [ref=e645]:
+                - cell "MiniMaxAI MiniMax M2.7 Enterprise minimaxai/minimax-m2.7" [ref=e646]:
+                  - generic [ref=e649]:
+                    - generic [ref=e650]:
+                      - link "MiniMaxAI MiniMax M2.7" [ref=e651] [cursor=pointer]:
+                        - /url: /docs/model/minimaxai/minimax-m2.7
+                        - img "MiniMaxAI"
+                        - text: MiniMax M2.7
+                      - generic [ref=e652]: Enterprise
+                    - generic [ref=e653]: minimaxai/minimax-m2.7
+                - cell "260" [ref=e654]:
+                  - generic [ref=e656]: "260"
+                - cell "Contact Sales" [ref=e657]:
+                  - generic [ref=e660]:
+                    - generic [ref=e661]: Contact
+                    - generic [ref=e662]: Sales
+                - cell "Contact Sales" [ref=e663]:
+                  - generic [ref=e666]:
+                    - generic [ref=e667]: Contact
+                    - generic [ref=e668]: Sales
+                - cell "196,608" [ref=e669]:
+                  - generic [ref=e671]: 196,608
+                - cell "131,072" [ref=e672]:
+                  - generic [ref=e674]: 131,072
+                - cell "-" [ref=e675]:
+                  - generic [ref=e677]: "-"
+              - row "OpenAI Safety GPT OSS 20B openai/gpt-oss-safeguard-20b 1000 $0.075 input $0.30 output 150K TPM 1K RPM 131,072 65,536 -" [ref=e678]:
+                - cell "OpenAI Safety GPT OSS 20B openai/gpt-oss-safeguard-20b" [ref=e679]:
+                  - generic [ref=e682]:
+                    - link "OpenAI Safety GPT OSS 20B" [ref=e684] [cursor=pointer]:
+                      - /url: /docs/model/openai/gpt-oss-safeguard-20b
+                      - img "OpenAI" [ref=e685]
+                      - text: Safety GPT OSS 20B
+                    - generic [ref=e686]: openai/gpt-oss-safeguard-20b
+                - cell "1000" [ref=e687]:
+                  - generic [ref=e689]: "1000"
+                - cell "$0.075 input $0.30 output" [ref=e690]:
+                  - generic [ref=e693]:
+                    - generic [ref=e694]: $0.075 input
+                    - generic [ref=e695]: $0.30 output
+                - cell "150K TPM 1K RPM" [ref=e696]:
+                  - generic [ref=e699]:
+                    - generic [ref=e700]: 150K TPM
+                    - generic [ref=e701]: 1K RPM
+                - cell "131,072" [ref=e702]:
+                  - generic [ref=e704]: 131,072
+                - cell "65,536" [ref=e705]:
+                  - generic [ref=e707]: 65,536
+                - cell "-" [ref=e708]:
+                  - generic [ref=e710]: "-"
+              - row "Alibaba Cloud Qwen/Qwen3.8-27B qwen/qwen3.8-27b 450 $0.80 input $4.00 output 250K TPM 1K RPM 131,072 16,384 20 MB" [ref=e711]:
+                - cell "Alibaba Cloud Qwen/Qwen3.8-27B qwen/qwen3.8-27b" [ref=e712]:
+                  - generic [ref=e715]:
+                    - link "Alibaba Cloud Qwen/Qwen3.8-27B" [ref=e717] [cursor=pointer]:
+                      - /url: /docs/model/qwen/qwen3.8-27b
+                      - img "Alibaba Cloud" [ref=e718]
+                      - text: Qwen/Qwen3.8-27B
+                    - generic [ref=e719]: qwen/qwen3.8-27b
+                - cell "450" [ref=e720]:
+                  - generic [ref=e722]: "450"
+                - cell "$0.80 input $4.00 output" [ref=e723]:
+                  - generic [ref=e726]:
+                    - generic [ref=e727]: $0.80 input
+                    - generic [ref=e728]: $4.00 output
+                - cell "250K TPM 1K RPM" [ref=e729]:
+                  - generic [ref=e732]:
+                    - generic [ref=e733]: 250K TPM
+                    - generic [ref=e734]: 1K RPM
+                - cell "131,072" [ref=e735]:
+                  - generic [ref=e737]: 131,072
+                - cell "16,384" [ref=e738]:
+                  - generic [ref=e740]: 16,384
+                - cell "20 MB" [ref=e741]:
+                  - generic [ref=e743]: 20 MB
+          - heading "Deprecated Models" [level=2] [ref=e744]:
+            - link "Deprecated Models" [ref=e745] [cursor=pointer]:
+              - /url: "#deprecated-models"
+          - paragraph [ref=e746]:
+            - text: Deprecated models are models that are no longer supported or will no longer be supported in the future. See our deprecation guidelines and deprecated models
+            - link "here" [ref=e747] [cursor=pointer]:
+              - /url: /docs/deprecations
+            - text: .
+          - heading "Get All Available Models" [level=2] [ref=e748]:
+            - link "Get All Available Models" [ref=e749] [cursor=pointer]:
+              - /url: "#get-all-available-models"
+          - paragraph [ref=e750]:
+            - text: Hosted models are directly accessible through the GroqCloud Models API endpoint using the model IDs mentioned above. You can use the
+            - code [ref=e751]: https://api.groq.com/openai/v1/models
+            - text: "endpoint to return a JSON list of all active models:"
+          - generic [ref=e752]:
+            - generic [ref=e753]:
+              - button "Select a language" [ref=e755] [cursor=pointer]:
+                - generic [ref=e756]: Python
+                - img [ref=e757]
+              - button "Copy snippet" [ref=e761] [cursor=pointer]:
+                - img [ref=e762]
+            - code [ref=e768]:
+              - generic [ref=e769]: "1"
+              - text: import requests
+              - generic [ref=e770]: "2"
+              - text: import os
+              - generic [ref=e771]: "3"
+              - generic [ref=e772]: "4"
+              - text: api_key = os.environ.get("GROQ_API_KEY")
+              - generic [ref=e773]: "5"
+              - text: url = "https://api.groq.com/openai/v1/models"
+              - generic [ref=e774]: "6"
+              - generic [ref=e775]: "7"
+              - text: "headers = {"
+              - generic [ref=e776]: "8"
+              - text: "\"Authorization\": f\"Bearer {api_key}\","
+              - generic [ref=e777]: "9"
+              - text: "\"Content-Type\": \"application/json\""
+              - generic [ref=e778]: "10"
+              - text: "}"
+              - generic [ref=e779]: "11"
+              - generic [ref=e780]: "12"
+              - text: response = requests.get(url, headers=headers)
+              - generic [ref=e781]: "13"
+              - generic [ref=e782]: "14"
+              - text: print(response.json())
+          - generic [ref=e783]:
+            - heading "Was this page helpful?" [level=3] [ref=e784]
+            - generic [ref=e785]:
+              - button "Yes" [ref=e786] [cursor=pointer]:
+                - img [ref=e787]
+                - generic [ref=e789]: "Yes"
+              - button "No" [ref=e790] [cursor=pointer]:
+                - img [ref=e791]
+                - generic [ref=e793]: "No"
+              - button "Suggest Edits" [ref=e794] [cursor=pointer]:
+                - img [ref=e795]
+                - generic [ref=e798]: Suggest Edits
+        - generic [ref=e801]:
+          - heading "On this page" [level=4] [ref=e802]:
+            - img [ref=e803]
+            - text: On this page
+          - list [ref=e806]:
+            - listitem [ref=e807]:
+              - link "Featured Models" [ref=e808] [cursor=pointer]:
+                - /url: "#featured-models"
+            - listitem [ref=e809]:
+              - link "Production Models" [ref=e810] [cursor=pointer]:
+                - /url: "#production-models"
+            - listitem [ref=e811]:
+              - link "Preview Models" [ref=e812] [cursor=pointer]:
+                - /url: "#preview-models"
+            - listitem [ref=e813]:
+              - link "Deprecated Models" [ref=e814] [cursor=pointer]:
+                - /url: "#deprecated-models"
+            - listitem [ref=e815]:
+              - link "Get All Available Models" [ref=e816] [cursor=pointer]:
+                - /url: "#get-all-available-models"
+  - region "Notifications alt+T"
+  - alert [ref=e817]

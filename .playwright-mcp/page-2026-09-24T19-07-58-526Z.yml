@@ -1,0 +1,34 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "LLMUtilizeAppMVC" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Home" [ref=e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e10]:
+            - link "Ask PDF" [ref=e11] [cursor=pointer]:
+              - /url: /PdfChat
+          - listitem [ref=e12]:
+            - link "Privacy" [ref=e13] [cursor=pointer]:
+              - /url: /Privacy
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "🤖 Parth's AI Assistant" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Powered by Groq LLM (Llama 3.3 70B Versatile) - Ask me anything!
+      - generic [ref=e21]:
+        - textbox "Ask me anything... e.g., What is an apple?" [ref=e22]
+        - button "🚀 Ask AI" [ref=e23] [cursor=pointer]
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: AI
+          - heading "Response" [level=3] [ref=e27]
+        - paragraph [ref=e29]: 👋 Hello! Type your question above and click "Ask AI" to get started.
+  - contentinfo [ref=e30]:
+    - generic [ref=e31]:
+      - text: © 2026 - LLMUtilizeAppMVC -
+      - link "Privacy" [ref=e32] [cursor=pointer]:
+        - /url: /Privacy

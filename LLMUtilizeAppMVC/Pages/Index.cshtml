@@ -1,0 +1,238 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "AI Chat - Ask Anything";
+}
+
+<style>
+    .chat-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .chat-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .chat-header h1 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .chat-header p {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+    }
+
+    .input-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .question-input {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .question-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+    }
+
+    .ask-btn {
+        width: 100%;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #667eea;
+        background: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .ask-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .ask-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .response-section {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        min-height: 200px;
+    }
+
+    .response-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+
+    .ai-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    .response-title {
+        color: #2c3e50;
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    .response-content {
+        color: #34495e;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        white-space: pre-wrap;
+    }
+
+    .error-message {
+        background: #fee;
+        border-left: 4px solid #e74c3c;
+        padding: 15px 20px;
+        border-radius: 5px;
+        color: #c0392b;
+    }
+
+    .success-message {
+        background: #f0fff0;
+        border-left: 4px solid #27ae60;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .meta-info {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        font-size: 0.85rem;
+        color: #95a5a6;
+    }
+
+    .meta-info span {
+        margin-right: 20px;
+    }
+
+    .placeholder-text {
+        color: #bdc3c7;
+        text-align: center;
+        padding: 40px;
+        font-size: 1.1rem;
+    }
+
+    .loading-spinner {
+        display: none;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .loading-spinner.show {
+        display: block;
+    }
+
+    @@keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    .loading-text {
+        animation: pulse 1.5s infinite;
+        color: #667eea;
+        font-size: 1.2rem;
+    }
+</style>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h1>🤖 Parth's AI Assistant</h1>
+        <p>Powered by Groq LLM - Ask me anything!</p>
+    </div>
+        
+    <form method="post" id="chatForm">
+        <div class="input-section">
+            <input type="text" 
+                   asp-for="Question" 
+                   class="question-input" 
+                   placeholder="Ask me anything... e.g., What is an apple?" 
+                   autocomplete="off"
+                   required />
+            <button type="submit" class="ask-btn" id="askBtn">
+                🚀 Ask AI
+            </button>
+        </div>
+    </form>
+
+    <div class="response-section">
+        <div class="response-header">
+            <div class="ai-icon">AI</div>
+            <h3 class="response-title">Response</h3>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner">
+            <p class="loading-text">🔄 Thinking...</p>
+        </div>
+
+        <div id="responseContent">
+            @if (Model.Response == null)
+            {
+                <p class="placeholder-text">
+                    👋 Hello! Type your question above and click "Ask AI" to get started.
+                </p>
+            }
+            else if (!Model.Response.Success)
+            {
+                <div class="error-message">
+                    <strong>⚠️ Error:</strong> @Model.Response.ErrorMessage
+                </div>
+            }
+            else
+            {
+                <div class="success-message">
+                    <div class="response-content">@Model.Response.Answer</div>
+                </div>
+                <div class="meta-info">
+                    <span>📊 Model: @Model.Response.Model</span>
+                    <span>🔢 Tokens Used: @Model.Response.TokensUsed</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('chatForm').addEventListener('submit', function() {
+        document.getElementById('askBtn').disabled = true;
+        document.getElementById('askBtn').innerHTML = '⏳ Processing...';
+        document.getElementById('loadingSpinner').classList.add('show');
+        document.getElementById('responseContent').style.display = 'none';
+    });
+</script>
